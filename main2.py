@@ -62,6 +62,7 @@ def get_d(p_x, p_y):
     roots_u = np.roots(coeffs)
     real_u = roots_u[np.isreal(roots_u) & (roots_u.real >= 0)].real
     solutions_x = real_u**2
+    print(solutions_x)
     return solutions_x
 def solve_mid_intersect(d,cam_r):
     v = sqrt_fov(d,cam_r,0)

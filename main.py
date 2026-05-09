@@ -42,10 +42,10 @@ def intersection_right(d, fov):
     y_sol = -x_sol / k + d / k
     return x_sol, y_sol
 def project_x(z,x):
-    a = 4
+    a = 4 * z * z
     b = -8 * x
-    c = 4 * x * x
-    d = - z * z
+    c = 4
+    d = - x * x
     roots = np.roots([a, b, c, d])
     d = np.real(roots[0])
     sqrt_d = np.sqrt(d)
